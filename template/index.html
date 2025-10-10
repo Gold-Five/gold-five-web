@@ -1,42 +1,60 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-    <div class = "grid-container">
-        <header class = "header">
-            <div class = "brand">
-                <a href = >Gold Five</a>
-            </div>
-            <div class = "header-links">
-                <a href = "cart.html">Cart</a>
-                <a href = "signin.html">Sign In</a>
-            </div>
-        </header>
-<head>
-    <link rel = "stylesheet" href="style.css">
-    <title>Gold Five</title>
-</head>
-<body>
-    <div>
-        <header>
-            Gold Five
-        </header>
-        <aside>
-            Shopping Categories
-        </aside>
-        <main>
-            <ul>
-                <li>Product 1</li>
-                <li>Product 2</li>
-                <li>Product 3</li>
-                <li>Product 4</li>
-                <li>Product 5</li>
-            </ul>
-        </main>
-        <footer>
-            &copy; 2025 Gold Five. All rights reserved.
-        </footer>
-    </div>
-</body>
+<div class="grid-container">
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Gold Five</title>
+    </head>
+
+    <body>
+        <div>
+            <header class="header">
+                <div class="brand">
+                    <button onclick="openMenu()">&#9776;</button>
+                    <a href=>Gold Five</a>
+                </div>
+                <div class="header-links">
+                    <a href="cart.html">Cart</a>
+                    <a href="signin.html">Sign In</a>
+                </div>
+            </header>
+            <aside class="sidebar">
+                <h3>Shopping Categories</h3>
+                <button class="sidebar-close-button" onclick="closeMenu()"> X </button>
+                <ul>
+                    <li>
+                        <a href="index.html">Pants</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html">Shirts</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <main>
+                <ul>
+                    <li>Product 1</li>
+                    <li>Product 2</li>
+                    <li>Product 3</li>
+                    <li>Product 4</li>
+                    <li>Product 5</li>
+                </ul>
+            </main>
+            <footer>
+                &copy; 2025 Gold Five. All rights reserved.
+            </footer>
+        </div>
+    </body>
 </div>
+<script>
+    function openMenu() {
+        document.querySelector(".sidebar").classList.add("open");
+    }
+    function closeMenu() {
+        document.querySelector(".sidebar").classList.remove("open");
+    }
+</script>
+
 </html>
