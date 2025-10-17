@@ -12,17 +12,14 @@ function App() {
   return (
     <div className="grid-container">
 
-      <head>
         <link rel="stylesheet" href="style.css" />
         <title>Gold Five</title>
-      </head>
 
-      <body>
         <div>
           <header className="header">
             <div className="brand">
               <button onClick={openMenu}>&#9776;</button>
-              <a href="Gold Five"></a>
+              <a href="/">Gold Five</a>
             </div>
             <div className="header-links">
               <a href="cart.html">Cart</a>
@@ -109,7 +106,6 @@ function App() {
             &copy; 2025 Gold Five. All rights reserved.
           </footer>
         </div>
-      </body>
     </div>
   );
 }
