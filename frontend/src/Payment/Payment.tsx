@@ -1,5 +1,5 @@
 import react from 'react';
-import CheckoutSteps from './CheckoutSteps';
+import CheckoutSteps from '../Payment/CheckoutSteps';
 import exp from 'constants';
 
 function PaymentScreen() {
