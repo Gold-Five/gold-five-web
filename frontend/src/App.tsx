@@ -6,6 +6,10 @@ import Home from './Home/Home';
 import Products from './Products/Products';
 import Orders from './Orders/Orders';
 import OrderDetail from './Orders/OrderDetail';
+import PaymentScreen from './Payment/Payment';
+import CheckoutSteps from './Payment/CheckoutSteps';
+import './style.css';
+
 
 
 function App() {
@@ -19,10 +23,10 @@ function App() {
     <Router>
       <div className="grid-container">
 
-        <link rel="stylesheet" href="style.css" />
-        <title>Gold Five</title>
+        {/* <link rel="stylesheet" href="style.css" /> */}
+        {/*<title>Gold Five</title>*/}
 
-        <div>
+        {/*<div>*/}
           <header className="header">
             <div className="brand">
               <button onClick={openMenu}>&#9776;</button>
@@ -32,6 +36,7 @@ function App() {
               <Link to="/">Home</Link>
               <Link to="/catalog">Catalog</Link>
               <Link to="/orders">Orders</Link>
+              <Link to ="/payment">Payment</Link>
             </div>
           </header>
           <aside className="sidebar">
@@ -48,19 +53,20 @@ function App() {
             </ul>
           </aside>
 
-          <main>
+          <main className="main">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/catalog" element={<Products />} />
-              <Route path="orders" element={<Orders />}></Route>
-              <Route path="/order/:id" element={<OrderDetail />}></Route>
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/order/:id" element={<OrderDetail />} />
+              <Route path="/payment" element={<PaymentScreen />} />
             </Routes>
           </main>
-          <footer>
+          <footer className="footer">
             &copy; 2025 Gold Five. All rights reserved.
           </footer>
         </div>
-      </div>
+      {/*</div>*/}
     </Router>
   );
 }
