@@ -63,7 +63,7 @@ function App() {
             </Routes>
           </main>
           <footer className="footer">
-            &copy; 2025 Gold Five. All rights reserved.
+            &copy; 2025 Gold Five
           </footer>
         </div>
       {/*</div>*/}
