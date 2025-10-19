@@ -6,6 +6,9 @@ import Home from './Home/Home';
 import Products from './Products/Products';
 import Orders from './Orders/Orders';
 import OrderDetail from './Orders/OrderDetail';
+import PaymentScreen from './Payment/Payment';
+import CheckoutSteps from './Payment/CheckoutSteps';
+
 
 
 function App() {
@@ -32,6 +35,7 @@ function App() {
               <Link to="/">Home</Link>
               <Link to="/catalog">Catalog</Link>
               <Link to="/orders">Orders</Link>
+              <Link to ="/payment">Payment</Link>
             </div>
           </header>
           <aside className="sidebar">
@@ -54,6 +58,7 @@ function App() {
               <Route path="/catalog" element={<Products />} />
               <Route path="orders" element={<Orders />}></Route>
               <Route path="/order/:id" element={<OrderDetail />}></Route>
+              <Route path="/payment" element={<PaymentScreen />}></Route>
             </Routes>
           </main>
           <footer>
