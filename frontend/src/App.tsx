@@ -11,10 +11,11 @@ import CheckoutSteps from './Payment/CheckoutSteps';
 import './style.css';
 
 const fulfillmentData = [
-  { id: 1, customer: "Alice Smith", item: "Laptop Sleeve", status: "Shipped" },
-  { id: 2, customer: "Bob Jones", item: "Wireless Mouse", status: "Pending" },
-  { id: 3, customer: "Chris Green", item: "Keyboard", status: "Shipped" },
-  { id: 4, customer: "Dana White", item: "Monitor Stand", status: "Pending" },
+  { id: 1, customer: "Alice Smith", item: "Pants", status: "Shipped" },
+  { id: 2, customer: "Bob Jones", item: "Pants", status: "Pending" },
+  { id: 3, customer: "Chris Green", item: "Shirt", status: "Shipped" },
+  { id: 4, customer: "Dana White", item: "Pants", status: "Pending" },
+  { id: 5, customer: "Dustin First", item: "Shirt", status: "Pending" },
 ];
 
 function Fulfillment() {
