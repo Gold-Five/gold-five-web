@@ -10,6 +10,48 @@ import PaymentScreen from './Payment/Payment';
 import CheckoutSteps from './Payment/CheckoutSteps';
 import './style.css';
 
+const fulfillmentData = [
+  { id: 1, customer: "Alice Smith", item: "Laptop Sleeve", status: "Shipped" },
+  { id: 2, customer: "Bob Jones", item: "Wireless Mouse", status: "Pending" },
+  { id: 3, customer: "Chris Green", item: "Keyboard", status: "Shipped" },
+  { id: 4, customer: "Dana White", item: "Monitor Stand", status: "Pending" },
+];
+
+function Fulfillment() {
+  return (
+    <div className="main">
+      <h2>Fulfillment Status</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Item</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {fulfillmentData.map(order => (
+            <tr key={order.id}>
+              <td>{order.id}</td>
+              <td>{order.customer}</td>
+              <td>{order.item}</td>
+              <td
+                style={{
+                  color: order.status === "Pending" ? "red" : "green",
+                  fontWeight: "bold",
+                }}
+              >
+                {order.status}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 
 
 function App() {
@@ -37,6 +79,8 @@ function App() {
               <Link to="/catalog">Catalog</Link>
               <Link to="/orders">Orders</Link>
               <Link to ="/payment">Payment</Link>
+              <Link to="/fulfillment">Fulfillment</Link>
+
             </div>
           </header>
           <aside className="sidebar">
@@ -60,6 +104,7 @@ function App() {
               <Route path="/orders" element={<Orders />} />
               <Route path="/order/:id" element={<OrderDetail />} />
               <Route path="/payment" element={<PaymentScreen />} />
+              <Route path="/fulfillment" element={<Fulfillment />} />
             </Routes>
           </main>
           <footer className="footer">

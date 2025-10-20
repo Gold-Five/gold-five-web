@@ -211,3 +211,18 @@ padding: 1rem;
 border: 0.1 rem #c0c0c0 solid;
 border-radius: 0.5rem;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
