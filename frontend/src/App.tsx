@@ -79,7 +79,7 @@ function App() {
               <Link to="/">Home</Link>
               <Link to="/catalog">Catalog</Link>
               <Link to="/orders">Orders</Link>
-              <Link to ="/payment">Payment</Link>
+              <Link to="/payment">Payments</Link>
               <Link to="/fulfillment">Fulfillment</Link>
 
             </div>
