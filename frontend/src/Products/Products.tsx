@@ -1,20 +1,40 @@
-import data from "./data";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 type Product = {
-  name: string;
-  imageUrl: string;
-  price: number;
-  brand: string;
-  rating: number;
-  numberOfReviews: number;
-};
+    id: number;
+    name: string;
+    description: string;
+    brand: string;
+    price: number;
+    rating: number;
+    numberOfReviews: number;
+    imageUrl: string;
+}
+
+const emptyProducts: Product[] = [];
 
 
 function Products() {
+    const [products, setProducts]: [Product[],(products: Product[]) => void] = useState(emptyProducts);
+    
+    useEffect(() => {
+        axios.get<Product[]>("htts://localhost:7250/catalog",
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            })
+            .then((response) => setProducts(response.data))
+            .catch((error) => console.log(error));
+            },[]);
+
+
     return (
         <div className="content">
             <ul className="products">
-                {data.products.map((product) => (
-                    <li>
+                {products.map((product) => (
+                    <li key={product.id}>
                         <div className="product">
                             <img
                                 className="product-image" 
